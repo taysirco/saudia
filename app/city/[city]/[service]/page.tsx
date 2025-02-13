@@ -148,7 +148,7 @@ export default async function ServicePage({ params }: Props) {
             <div className="sticky top-4">
               <ContactForm 
                 cityName={cityName}
-                serviceName={service?.title}
+                serviceName={service?.title || undefined}
               />
             </div>
           </div>

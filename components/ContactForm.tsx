@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 interface Props {
   cityName: string
+  serviceName?: string
 }
 
 interface FormData {
@@ -13,7 +14,7 @@ interface FormData {
   message: string
 }
 
-export default function ContactForm({ cityName }: Props) {
+export default function ContactForm({ cityName, serviceName }: Props) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -38,6 +39,7 @@ export default function ContactForm({ cityName }: Props) {
         body: JSON.stringify({
           ...formData,
           city: cityName,
+          service: serviceName,
           timestamp: new Date().toISOString()
         }),
       })
