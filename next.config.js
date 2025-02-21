@@ -18,6 +18,20 @@ const nextConfig = {
       }
     })
     return config
+  },
+  async redirects() {
+    return [
+      {
+        source: '/city/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
+      {
+        source: '/city/:slug/:service',
+        destination: '/:slug/:service',
+        permanent: true,
+      }
+    ]
   }
 };
 

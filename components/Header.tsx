@@ -35,7 +35,7 @@ export default async function Header() {
                   {mainCities.map(city => (
                     <Link
                       key={city.name}
-                      href={`/city/${getSlugFromCity(city.name)}`}
+                      href={`/${getSlugFromCity(city.name)}`}
                       className="block px-4 py-2 text-gray-800 hover:bg-blue-50"
                     >
                       {city.name}
